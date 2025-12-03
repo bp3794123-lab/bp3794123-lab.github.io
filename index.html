@@ -1,78 +1,109 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>김건효 · Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김건효 · Backend Developer Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Pretendard", "Noto Sans KR", sans-serif;
-            background: #eef3f8;
-            color: #1a1a1a;
-        }
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Pretendard&display=swap");
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Pretendard", sans-serif;
+        background: linear-gradient(135deg, #dce6ff, #f3f7ff, #ffffff);
+        min-height: 100vh;
+    }
 
-        .header {
-            background: #234a91;
-            color: white;
-            padding: 40px 30px;
-            border-radius: 14px;
-            margin-top: 40px;
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-        }
+    /* HEADER */
+    .header {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, rgba(55,105,255,0.9), rgba(104,147,255,0.9));
+        color: white;
+        border-radius: 0 0 40px 40px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
 
-        .header h1 {
-            margin: 0;
-            font-size: 40px;
-            font-weight: 700;
-        }
+    .header h1 {
+        font-size: 50px;
+        margin: 0;
+        font-weight: 800;
+    }
 
-        .header p {
-            margin-top: 8px;
-            opacity: 0.85;
-        }
+    .header p {
+        margin-top: 12px;
+        font-size: 20px;
+        opacity: 0.95;
+    }
 
-        .section {
-            background: white;
-            margin-top: 25px;
-            padding: 25px;
-            border-radius: 14px;
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-        }
+    /* CONTAINER */
+    .container {
+        max-width: 1050px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
 
-        .section h2 {
-            margin-top: 0;
-            color: #234a91;
-            font-size: 24px;
-            border-left: 6px solid #234a91;
-            padding-left: 12px;
-        }
+    /* GLASS SECTION */
+    .section {
+        background: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-radius: 22px;
+        padding: 35px;
+        margin-top: 30px;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        transition: all 0.25s ease;
+    }
 
-        ul {
-            padding-left: 20px;
-            line-height: 1.7;
-        }
+    .section:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
+    }
 
-        .contact a {
-            text-decoration: none;
-            color: #234a91;
-            font-weight: 600;
-        }
+    .section h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #2b47c7;
+        font-weight: 700;
+    }
 
-        .footer {
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-            color: #777;
-            font-size: 14px;
-        }
+    ul {
+        padding-left: 20px;
+        line-height: 1.8;
+    }
+
+    /* PROJECT CARD */
+    .project-card {
+        background: rgba(255,255,255,0.6);
+        padding: 20px;
+        margin-bottom: 18px;
+        border-radius: 18px;
+        border: 1px solid rgba(255,255,255,0.5);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .project-card h3 {
+        color: #2b47c7;
+        margin-top: 0;
+    }
+
+    /* CONTACT */
+    .contact a {
+        text-decoration: none;
+        font-weight: 700;
+        color: #2b47c7;
+    }
+
+    /* FOOTER */
+    .footer {
+        text-align: center;
+        margin-top: 60px;
+        color: #666;
+        margin-bottom: 35px;
+    }
     </style>
 </head>
 <body>
@@ -80,35 +111,38 @@
 
         <!-- HEADER -->
         <div class="header">
-            <h1>김건효 (K-GunHyo)</h1>
-            <p>컴퓨터공학과 2학년 · Software & Systems Learner</p>
+            <h2>김건효 </h2>
+            <p>컴퓨터공학과 2학년 20212158</p>
         </div>
 
         <!-- SUMMARY -->
         <div class="section">
-            <h2>요약 (Summary)</h2>
+            <h2>자기소</h2>
             <p>
-                컴퓨터공학 핵심 기초를 탄탄하게 다지기 위해 자료구조, 알고리즘, 운영체제 등을 중심으로 학습하고 있습니다.
-                문제 해결 능력과 깔끔한 코드 스타일을 목표로 꾸준히 프로젝트와 실습을 진행하고 있으며,
-                Git & GitHub 중심의 협업 방식에 익숙해지고 있습니다.
+                 백엔드 개발자로 성장하기 위해 서버 구조, 데이터 처리, API 설계와 같은 핵심 개념을 중심으로 학습하고 있습니다.
+                C 언어를 기반으로 컴퓨터 동작 원리와 메모리 구조를 이해하고 있으며,
+                Python과 Java를 활용한 서버 개발 기초도 함께 익히고 있습니다.<br><br>
+                GitHub를 통해 학습 내용을 정리하고 프로젝트를 체계적으로 관리하며,
+                안정적이고 확장 가능한 서버 개발자가 되는 것을 목표로 하고 있습니다.
             </p>
         </div>
 
         <!-- EDUCATION -->
         <div class="section">
             <h2>학력</h2>
-            <p><strong>○○대학교 컴퓨터공학과</strong> — 2학년 재학</p>
-            <p><strong>관심 분야:</strong> 시스템, 자료구조, 알고리즘, 웹 개발</p>
+            <p><strong>동대학교 컴퓨터공학과</strong> — 2학년 재학</p>
+            <p><strong>중점 학습:</strong> 자료구조, 알고리즘, 운영체제, 데이터베이스, 네트워크</p>
         </div>
 
         <!-- SKILLS -->
         <div class="section">
             <h2>기술 스택</h2>
             <ul>
-                <li><strong>언어:</strong> C, Python, Java(기초)</li>
+                <li><strong>언어:</strong> C, Python, Java(기초) c++</li>
                 <li><strong>웹:</strong> HTML5, CSS3</li>
                 <li><strong>버전 관리:</strong> Git & GitHub</li>
                 <li><strong>환경:</strong> Windows, WSL(Ubuntu), Linux 기본 명령어</li>
+                <li><strong>데이터베이스:</strong> MySQL 기본 쿼리 학습 중</li>
             </ul>
         </div>
 
@@ -130,12 +164,8 @@
         <div class="section">
             <h2>연락처</h2>
             <p class="contact">
-                📧 Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br />
-                🐙 GitHub: <a href="https://github.com/your-id" target="_blank">github.com/your-id</a>
+                📧 Email: <a href="mailto:your.email@example.com">bp3794@naver.com</a><br />
+                🐙 GitHub: <a href="https://github.com/your-id" target="_blank">bp3794123-lab.github.io/your-id</a>
             </p>
-        </div>
-
-        <div class="footer">© 2025 Kim GeonHyo Portfolio</div>
-    </div>
 </body>
 </html>
